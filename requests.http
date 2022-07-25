@@ -1,0 +1,68 @@
+### Create
+
+POST http://127.0.0.1:5000/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "YuZu",
+  "password": "12345qwerty",
+  "role": "admin"
+}
+
+### Auth
+
+POST http://127.0.0.1:5000/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "YuZu",
+  "password": "12345qwerty"
+}
+
+### Get test
+
+GET http://127.0.0.1:5000/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ill1WnUiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTg3NjEyMTV9.2s46uAq94dwzpVDwcbrxSiMWLxq6dNaa150l2rOna0M
+
+### Post test
+
+POST http://127.0.0.1:5000/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ill1WnUiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTg3NjEyMTV9.2s46uAq94dwzpVDwcbrxSiMWLxq6dNaa150l2rOna0M
+
+{
+  "title": "Гарри Поттер мой кумир!",
+  "trailer": "таким фильмам не нужны трейлеры",
+  "year": 1990,
+  "rating": 10,
+  "description": "10 из 10!"
+}
+
+### Put test
+
+PUT http://127.0.0.1:5000/movies/21
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ill1WnUiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTg3NjEyMTV9.2s46uAq94dwzpVDwcbrxSiMWLxq6dNaa150l2rOna0M
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+### Delete test
+
+DELETE http://127.0.0.1:5000/movies/22
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ill1WnUiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTg3NjEyMTV9.2s46uAq94dwzpVDwcbrxSiMWLxq6dNaa150l2rOna0M
